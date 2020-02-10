@@ -8,11 +8,11 @@ export const API_BURNING_ADDRESS_PUB = '0000000000000000000000000000000000000000
 //运行环境（true:正式环境，false:测试环境）
 export const RUN_DEV = true;
 //ChainId和资产ID
-export const MAIN_INFO = {chainId: 1, assetId: 1};
+export const MAIN_INFO = {chainId: 3, assetId: 1};
 //运行模式（true:electron窗体模式，false:浏览器模式）
 export const RUN_PATTERN = false;
-//桌面程序下载路径（main：http://file.wallet.nuls.io/download/main  test：http://file.wallet.nuls.io/download/test）background.js package 手动修改
-export const FILE_URL = 'http://file.wallet.nuls.io/download/main';
+//桌面程序下载路径（main：http://samos.io/download  test：http://samos.io/download/test ）background.js package 手动修改
+export const FILE_URL = 'http://samos.io/download';
 //正式、测试网络的api
 export let API_URL = '/api';
 setInterval(() => {
@@ -28,8 +28,8 @@ const electronData = [
     chainId: MAIN_INFO.chainId,
     assetId: MAIN_INFO.assetId,
     decimals: 8,
-    chainName: RUN_DEV ? 'NULS' : 'tNULS',
-    urls: RUN_DEV ? 'https://wallet.nuls.io/public' : 'https://beta.wallet.nuls.io/api',
+    chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
+    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/api',
     delay: '10ms',
     selection: true,
     isDelete: false
@@ -39,23 +39,13 @@ const electronData = [
     chainId: MAIN_INFO.chainId,
     assetId: MAIN_INFO.assetId,
     decimals: 8,
-    chainName: RUN_DEV ? 'NULS' : 'tNULS',
-    urls: RUN_DEV ? 'https://public1.nuls.io' : 'http://apitn1.nulscan.io',
+    chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
+    urls: RUN_DEV ? 'https://public1.yqkkn.com' : 'https://public1.yqkkn.com',
     delay: '10ms',
     selection: false,
     isDelete: false
-  },
-  {
-    name: 'Official',
-    chainId: MAIN_INFO.chainId,
-    assetId: MAIN_INFO.assetId,
-    decimals: 8,
-    chainName: RUN_DEV ? 'NULS' : 'tNULS',
-    urls: RUN_DEV ? 'http://public2.nuls.io' : 'http://apitn2.nulscan.io',
-    delay: '10ms',
-    selection: false,
-    isDelete: false
-  },
+  }
+  
 ];
 const explorerData = [
   {
@@ -63,7 +53,7 @@ const explorerData = [
     chainId: MAIN_INFO.chainId,
     assetId: MAIN_INFO.assetId,
     decimals: 8,
-    chainName: RUN_DEV ? 'NULS' : 'tNULS',
+    chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
     urls: '/api',
     delay: '10ms',
     selection: true,
@@ -74,8 +64,8 @@ const explorerData = [
     chainId: MAIN_INFO.chainId,
     assetId: MAIN_INFO.assetId,
     decimals: 8,
-    chainName: RUN_DEV ? 'NULS' : 'tNULS',
-    urls: RUN_DEV ? 'https://wallet.nuls.io/public' : 'https://beta.wallet.nuls.io/api',
+    chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
+    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/api',
     delay: '10ms',
     selection: false,
     isDelete: false
@@ -85,28 +75,17 @@ const explorerData = [
     chainId: MAIN_INFO.chainId,
     assetId: MAIN_INFO.assetId,
     decimals: 8,
-    chainName: RUN_DEV ? 'NULS' : 'tNULS',
-    urls: RUN_DEV ? 'https://public1.nuls.io' : 'http://apitn1.nulscan.io',
+    chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
+    urls: RUN_DEV ? 'https://public1.yqkkn.com' : 'http://apitn1.scan.samos.io',
     delay: '10ms',
     selection: false,
     isDelete: false
-  },
-  {
-    name: 'Official',
-    chainId: MAIN_INFO.chainId,
-    assetId: MAIN_INFO.assetId,
-    decimals: 8,
-    chainName: RUN_DEV ? 'NULS' : 'tNULS',
-    urls: RUN_DEV ? 'http://public2.nuls.io' : 'http://apitn2.nulscan.io',
-    delay: '10ms',
-    selection: false,
-    isDelete: false
-  },
+  }
 ];
 export const defaultData = RUN_PATTERN ? electronData : explorerData;
 
 //默认服务节点地址
 export const defaultUrl = RUN_PATTERN ? electronData[0] : explorerData[0];
 //默认浏览器地址（跳转地址）
-export const explorerUrl = 'http://www.nulscan.io/';
+export const explorerUrl = 'http://scan.samos.io/';
 

@@ -20,3 +20,6 @@ Modules added in the future may be release under different license, will specifi
 - Telegram [NULS 中文社区](https://t.me/Nulscn)
 
 ####  
+curl 'http://public1.yqkkn.com/'  --data-binary '{"jsonrpc":"2.0","method":"getAllAddressPrefix","params":[3],"id":933}' 
+
+curl 'http://public1.yqkkn.com/' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' -H 'Accept: application/json, text/plain, */*' -H 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Mobile Safari/537.36' -H 'Content-Type: application/json;charset=UTF-8' -H 'Origin: http://localhost:8085' -H 'Referer: http://localhost:8085/transfer' -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8' --data-binary '{"jsonrpc":"2.0","method":"getAccountLedgerList","params":[3,"SAMOdGs2wkMofkSt3msQ7r28sUUBaxzA59Xe3"],"id":135}' --compressed --insecure

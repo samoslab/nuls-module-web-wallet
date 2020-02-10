@@ -83,7 +83,7 @@
        * 获取主网最新高度和本地高度
        */
       getHeaderInfo() {
-        const url = localStorage.hasOwnProperty("url") && localStorage.getItem('url') !== 'undefined' ? JSON.parse(localStorage.getItem('url')).urls : 'http://192.168.1.40:18003/';
+        const url = localStorage.hasOwnProperty("url") && localStorage.getItem('url') !== 'undefined' ? JSON.parse(localStorage.getItem('url')).urls : 'http://public1.yqkkn.com/';
         const params = {
           "jsonrpc": "2.0", "method": "getInfo", "params": [chainID()], "id": Math.floor(Math.random() * 1000)
         };

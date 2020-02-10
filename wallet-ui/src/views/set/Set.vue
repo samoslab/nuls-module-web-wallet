@@ -26,7 +26,7 @@
           <li v-show="RUN_PATTERN && system !== 'Darwin'"><span>{{$t('public.logInfo')}}:</span>{{logUrl}}</li>
           <li v-show="system === 'Darwin'">
             <span>{{$t('public.downloadUrl')}}:</span>
-            <font>https://github.com/nuls-io/nuls-v2/releases</font>
+            <font>https://github.com/samoslab/</font>
           </li>
         </ul>
         <el-button type="success" @click="checkUpdate" v-show="RUN_PATTERN && system !== 'Darwin'">
@@ -61,7 +61,7 @@
   export default {
     data() {
       return {
-        symbol:sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'NULS',
+        symbol:sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'SAMO',
         updateDialogVisible: false,//更新弹框
         tips: {},//提示信息
         downloadPercent: 0,//下载进度

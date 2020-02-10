@@ -226,7 +226,7 @@
         transferForm: {
           fromAddress: '',
           toAddress: '',
-          type: this.$route.query.accountType ? this.$route.query.accountType.account : 'NULS',
+          type: this.$route.query.accountType ? this.$route.query.accountType.account : 'SAMO',
           amount: '',
           senior: false,
           gas: this.gasNumber,
@@ -240,7 +240,7 @@
           price: [{validator: validatePrice, trigger: 'blur'}],
         }, //验证信息
         fee: 0.001, //手续费
-        feeSymbol: "NULS",//手续费显示单位
+        feeSymbol: "SAMO",//手续费显示单位
         contractInfo: {},//向合约地址转账是 合约信息
         transferVisible: false,//转账确认弹框
         isCross: false,//是否跨链交易
@@ -262,17 +262,23 @@
         this.prefix = '';
       });
 
+       
+    
+
       this.addressInfo = addressInfo(1);
+      console.log("addressInfo:"+this.addressInfo);
       setInterval(() => {
         this.addressInfo = addressInfo(1);
         if (this.changeAssets.balance) {
           this.loading = false;
         }
+
       }, 500);
       this.transferForm.fromAddress = this.addressInfo.address;
 
       setTimeout(() => {
         this.getCapitalListByAddress(this.transferForm.fromAddress);
+
         this.loading = false;
       }, 600);
 
@@ -620,15 +626,15 @@
        * @param type 0：首次进入加载 1：填写地址以后判断默认为nuls
        **/
       changeNuls(type = 1) {
-        let defaultType = sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'NULS';
+        let defaultType = sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'SAMO';
         if (type === 0) {
           if (this.$route.query.accountType) {
             defaultType = this.$route.query.accountType.contractAddress
           }
         }
-        //console.log(this.assetsList);
+        console.log(this.assetsList);
         for (let item of this.assetsList) {
-          if (defaultType === 'NULS') {
+          if (defaultType === 'SAMO') {
             if (item.symbol === defaultType) {
               this.changeAssets = item;
               this.transferForm.type = item.symbol;

@@ -114,7 +114,7 @@ export function chainID() {
     let newUrl = JSON.parse(localStorage.getItem('url'));
     return newUrl.chainId
   } else {
-    return RUN_DEV ? 1 : 2;
+    return RUN_DEV ? 3 : 4;
   }
 }
 
@@ -281,8 +281,8 @@ export function connectToExplorer(name, parameter) {
   }
   //console.log(newUrl);
 
-  let symbol = sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'NULS';
-  if (symbol === 'NULS') {
+  let symbol = sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'SAMO';
+  if (symbol === 'SAMO') {
     openner(newUrl);
   }
 

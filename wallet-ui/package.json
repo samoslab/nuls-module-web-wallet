@@ -1,5 +1,5 @@
 {
-  "name": "NULS-Wallet",
+  "name": "SAMO-Wallet",
   "version": "2.1.0",
   "private": true,
   "scripts": {
@@ -82,7 +82,7 @@
   "publish": [
     {
       "provider": "generic",
-      "url": "http://file.wallet.nuls.io/download/main"
+      "url": "http://samos.io/download"
     }
   ],
   "main": "background.js"

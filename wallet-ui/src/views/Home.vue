@@ -15,7 +15,7 @@
       <div class="total fl">
         <p>{{$t('tab.tab2')}}</p>
         <h6>{{addressNULSAssets.total}}
-          <span class="font16" v-show="symbol.toLocaleUpperCase() ==='NULS'"> ≈ $ {{NULSUsdt}}</span>
+          <span class="font16" v-show="symbol.toLocaleUpperCase() ==='SAMO'"> ≈ $ {{NULSUsdt}}</span>
         </h6>
       </div>
       <div class="balance fl">
@@ -146,7 +146,7 @@
     name: 'home',
     data() {
       return {
-        symbol: 'NULS', //symbol
+        symbol: 'SAMO', //symbol
         homeActive: 'homeFirst',   //tab默认选中
         addressInfo: {},//默认账户信息
         addressNULSAssets: {},//账户NULS资产信息
@@ -194,7 +194,7 @@
 
     },
     mounted() {
-      this.symbol = sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'NULS';
+      this.symbol = sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'SAMO';
     },
     watch: {
       addressInfo(val, old) {
@@ -339,9 +339,9 @@
         axios.defaults.baseURL = '';
         let url = '';
         if (RUN_PATTERN) {
-          url = "http://binanceapi.zhoulijun.top/api/v3/ticker/price?symbol=NULSUSDT"
+          url = "http://samos.yqkkn.com/api/samoprice"
         } else {
-          url = "/market-api/nuls-price"
+          url = "http://samos.yqkkn.com/api/samoprice"
         }
         axios.get(url)
           .then((response) => {

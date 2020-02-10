@@ -270,23 +270,27 @@ export async function getAllAddressPrefix() {
   let newData = [
     {chainId: 1, addressPrefix: 'NULS'},
     {chainId: 2, addressPrefix: 'tNULS'},
+    {chainId: 3, addressPrefix: 'SAMO'},
+    {chainId: 4, addressPrefix: 'tSAMO'},
   ];
-  await post('/', 'getAllAddressPrefix', [])
-    .then((response) => {
-      //console.log(response);
-      if (response.hasOwnProperty("result")) {
-        if (sessionStorage.hasOwnProperty('prefixData')) {
-          sessionStorage.removeItem('prefixData')
-        }
-        sessionStorage.setItem('prefixData', JSON.stringify(response.result));
-      } else {
-        sessionStorage.setItem('prefixData', JSON.stringify(newData));
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      sessionStorage.setItem('prefixData', JSON.stringify(newData));
-    });
+  sessionStorage.setItem('prefixData', JSON.stringify(newData));
+
+  // await post('/', 'getAllAddressPrefix', [])
+  //   .then((response) => {
+  //     //console.log(response);
+  //     if (response.hasOwnProperty("result")) {
+  //       if (sessionStorage.hasOwnProperty('prefixData')) {
+  //         sessionStorage.removeItem('prefixData')
+  //       }
+  //       sessionStorage.setItem('prefixData', JSON.stringify(response.result));
+  //     } else {
+  //       sessionStorage.setItem('prefixData', JSON.stringify(newData));
+  //     }
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //     sessionStorage.setItem('prefixData', JSON.stringify(newData));
+  //   });
 }
 
 //根据链ID获取前缀
