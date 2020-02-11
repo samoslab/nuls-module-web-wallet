@@ -279,7 +279,7 @@ export function connectToExplorer(name, parameter) {
   } else if (name === 'nuls') {
     newUrl = parameter
   }
-  //console.log(newUrl);
+  console.log(newUrl);
 
   let symbol = sessionStorage.hasOwnProperty('info') ? JSON.parse(sessionStorage.getItem('info')).defaultAsset.symbol : 'SAMO';
   if (symbol === 'SAMO') {

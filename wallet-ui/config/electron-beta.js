@@ -16,9 +16,9 @@ export const RUN_PATTERN = true;
 //桌面程序下载路径
 export const FILE_URL = 'http://beta.samos.io/download/test';
 //正式、测试网络的api
-export let API_URL = 'https://wallet.samos.io/api';
+export let API_URL = 'https://wallet.samos.io/';
 setInterval(() => {
-  API_URL = localStorage.hasOwnProperty("url") && localStorage.getItem('url') !== 'undefined' ? JSON.parse(localStorage.getItem("url")).urls : 'https://wallet.samos.io/api';
+  API_URL = localStorage.hasOwnProperty("url") && localStorage.getItem('url') !== 'undefined' ? JSON.parse(localStorage.getItem("url")).urls : 'https://wallet.samos.io/';
 }, 500);
 //请求最迟时间
 export const API_TIME = '8000';
@@ -31,7 +31,7 @@ const electronData = [
     assetId: MAIN_INFO.assetId,
     decimals: 8,
     chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
-    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/api',
+    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/',
     delay: '10ms',
     selection: true,
     isDelete: false

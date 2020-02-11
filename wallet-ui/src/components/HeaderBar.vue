@@ -142,9 +142,9 @@
             if (keyPath[1] === 'official') {
               newUrl = 'https://samos.io/'
             } else if (keyPath[1] === 'explorer') {
-              newUrl = RUN_DEV ? 'https://scan.samos.io/' : 'http://beta.scan.samos.io/'
+              newUrl = RUN_DEV ? 'https://scan.samos.io/' : 'http://tscan.samos.io/'
             } else if (keyPath[1] === 'docs') {
-              newUrl = 'https://docs.samos.io/'
+              newUrl = 'http://samos.io/update'
             }
             connectToExplorer('nuls', newUrl);
           }

@@ -84,7 +84,8 @@
        */
       getHeaderInfo() {
         const url = localStorage.hasOwnProperty("url") && localStorage.getItem('url') !== 'undefined' ? JSON.parse(localStorage.getItem('url')).urls : 'http://public1.yqkkn.com/';
-        const params = {
+       console.log("getHeaderUrl:"+url);
+       const params = {
           "jsonrpc": "2.0", "method": "getInfo", "params": [chainID()], "id": Math.floor(Math.random() * 1000)
         };
         //console.log(url);
