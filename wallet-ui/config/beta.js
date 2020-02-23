@@ -23,24 +23,14 @@ export const API_TIME = '8000';
 
 //默认节点服务列表
 const electronData = [
+ 
   {
     name: 'Official',
     chainId: MAIN_INFO.chainId,
     assetId: MAIN_INFO.assetId,
     decimals: 8,
     chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
-    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/',
-    delay: '10ms',
-    selection: true,
-    isDelete: false
-  },
-  {
-    name: 'Official',
-    chainId: MAIN_INFO.chainId,
-    assetId: MAIN_INFO.assetId,
-    decimals: 8,
-    chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
-    urls: RUN_DEV ? 'https://public1.yqkkn.com' : 'http://tscan.samos.io',
+    urls: RUN_DEV ? 'https://public1.yqkkn.com' : 'https://wallet.yqkkn.com/api‘,
     delay: '10ms',
     selection: false,
     isDelete: false
@@ -64,7 +54,7 @@ const explorerData = [
     assetId: MAIN_INFO.assetId,
     decimals: 8,
     chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
-    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/',
+    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/api',
     delay: '10ms',
     selection: false,
     isDelete: false
@@ -75,4 +65,4 @@ export const defaultData = RUN_PATTERN ? electronData : explorerData;
 //默认服务节点地址
 export const defaultUrl = RUN_PATTERN ? electronData[0] : explorerData[0];
 //默认浏览器地址（跳转地址）
-export const explorerUrl = 'http://tscan.samos.io/';
+export const explorerUrl = 'http://scan.samos.io/';

@@ -153,7 +153,7 @@
         if (newInfo) {
           let newUrlsList = ['https://wallet.samos.io/public', 'https://public1.yqkkn.com']
           let newUrlData = this.$store.getters.getUrlData;
-          if (newInfo.defaultAsset.symbol !== 'NULS') {
+          if (newInfo.defaultAsset.symbol !== 'SAMO') {
             for (let item of newUrlsList) {
               if (newUrlData.findIndex(o => o.urls === item) !== -1) {
                 newUrlData.splice(newUrlData.findIndex(o => o.urls === item), 1);

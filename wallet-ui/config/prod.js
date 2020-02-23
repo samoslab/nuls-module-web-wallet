@@ -29,7 +29,7 @@ const electronData = [
     assetId: MAIN_INFO.assetId,
     decimals: 8,
     chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
-    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/',
+    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/api',
     delay: '10ms',
     selection: true,
     isDelete: false
@@ -65,7 +65,7 @@ const explorerData = [
     assetId: MAIN_INFO.assetId,
     decimals: 8,
     chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
-    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/',
+    urls: RUN_DEV ? 'https://wallet.samos.io/public' : 'https://wallet.samos.io/api',
     delay: '10ms',
     selection: false,
     isDelete: false
@@ -76,7 +76,7 @@ const explorerData = [
     assetId: MAIN_INFO.assetId,
     decimals: 8,
     chainName: RUN_DEV ? 'SAMO' : 'tSAMO',
-    urls: RUN_DEV ? 'https://public1.yqkkn.com' : 'http://apitn1.scan.samos.io',
+    urls: RUN_DEV ? 'https://public1.yqkkn.com' : 'http://public1.yqkkn.com',
     delay: '10ms',
     selection: false,
     isDelete: false
